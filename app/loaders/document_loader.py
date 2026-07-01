@@ -1,6 +1,10 @@
 from pypdf import PdfReader
 import os
 from config import MAX_FILE_SIZE
+from dataclasses import dataclass
+from models.document import Document
+
+
 #Loader for pdf
 def loader_pdf(filepath):
     try:
@@ -27,12 +31,12 @@ def loader_txt(filepath):
     return text
 
 
-#For lading files and returing the result with info (to append later)
+#For loading files and returning the result with info (to append later)
 def loader_document(filepath):
     if not os.path.exists(filepath):
         raise ValueError(f"{filepath} does not exist.")
     size = os.path.getsize(filepath)
-    
+
     if size > MAX_FILE_SIZE:
         raise ValueError(f"{filepath} exceeds the maximum file size.")
  
@@ -45,16 +49,16 @@ def loader_document(filepath):
 
     if not text.strip():
         raise ValueError(f"{filepath} is empty.")
-
+    result = Document(
+        filename=os.path.basename(filepath),
+        filepath=filepath,
+        filetype=os.path.splitext(filepath)[1][1:],
+        text=text,
+    )
     
-    result ={ "filepath": filepath, 
-             "filename": os.path.basename(filepath),
-             "filetype": os.path.splitext(filepath)[1],
-             "text": text, 
-             "length": len(text)}
     return result
 
-#Function to main - to load all filkes and append the result (json format)
+#Function to main - to load all files and append the result (json format)
 def ingest_folder(folder_path):
     res=[]
     for root, dirs, files in os.walk(folder_path):
