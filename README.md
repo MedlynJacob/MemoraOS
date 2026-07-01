@@ -1,221 +1,360 @@
 <div align="center">
 
-# 🧠 MemoraOS
+# ⚡ MEMORAOS ⚡
 
-### *Building an Operating System for AI Memory*
+### *Your AI Second Brain for Job Hunting*
 
-*"Not another chatbot. The memory behind one."*
+<img src="https://readme-typing-svg.demolab.com?font=VT323&size=28&pause=1000&color=39FF14&center=true&vCenter=true&width=650&lines=Booting+MemoraOS...;Loading+Memory+Engine...;Connecting+AI+Core...;Ready." />
 
----
+<br>
 
 ```text
-╔══════════════════════════════════════════════════════╗
-║                  MEMORA OS v0.1                      ║
-║          Booting AI Memory Operating System...       ║
-╚══════════════════════════════════════════════════════╝
+══════════════════════════════════════════════════════════════════════
 
-[✓] Initializing Project
-[✓] Loading Document Ingestion Module
-[ ] Loading Document Models
-[ ] Initializing Chunking Engine
-[ ] Initializing Embedding Engine
-[ ] Connecting Vector Database
-[ ] Starting Semantic Retrieval
-[ ] Launching Memory Engine
+BOOT SEQUENCE INITIATED...
 
-System Status : ONLINE
-Completion    : 15%
+████████████████████████████████████████████████ 100%
+
+✓ Memory Engine ................. ONLINE
+✓ Document Loader ............... ONLINE
+✓ Knowledge Core ............... ONLINE
+✓ UUID Generator ............... ONLINE
+✓ AI Assistant ................. LOADING...
+
+STATUS :: READY
+
+══════════════════════════════════════════════════════════════════════
 ```
+
+### *"Remember Everything. Forget Nothing."*
+
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/STATUS-BUILDING-success?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-POWERED-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/VERSION-v0.1-orange?style=for-the-badge)
 
 </div>
 
 ---
 
-# What is MemoraOS?
+# > `whoami`
 
-MemoraOS is my attempt to build a modular AI memory system from scratch.
+Hi, I'm **MemoraOS**.
 
-Instead of building another Retrieval-Augmented Generation (RAG) chatbot, this project focuses on building the **memory architecture** that powers intelligent AI assistants.
+An AI-powered knowledge system built to become the ultimate career companion.
 
-The goal is to design a scalable system capable of:
+I don't just store documents.
 
-- 📄 Understanding documents
-- ✂️ Breaking them into meaningful chunks
-- 🧠 Generating semantic embeddings
-- 🔍 Retrieving relevant knowledge
-- 💬 Providing persistent memory for AI applications
+I remember them.
 
-Everything is being implemented incrementally with a focus on clean software architecture rather than simply using libraries.
+I connect them.
+
+I retrieve them.
+
+I help you use them.
+
+Imagine asking:
+
+```bash
+> Which resume did I send to Amazon?
+
+> Generate interview questions from this Job Description.
+
+> Which projects match this role?
+
+> Summarize everything I know about Retrieval-Augmented Generation.
+
+> What did I learn about Operating Systems last semester?
+```
+
+That's where this project is headed.
 
 ---
 
-# Current Architecture
+# > `boot.log`
 
 ```text
-                  Raw Documents
-                        │
-                        ▼
-              Document Ingestion
-                        │
-                        ▼
-                 Document Objects
-                        │
-                        ▼
-                 Chunking Engine
-                        │
-                        ▼
-              Embedding Generation
-                        │
-                        ▼
-                 Vector Database
-                        │
-                        ▼
-               Semantic Retrieval
-                        │
-                        ▼
-                 Large Language Model
+[00:00] Initializing Memory Engine...
+[00:01] Loading Documents...
+[00:02] Building Knowledge Base...
+[00:03] Connecting AI Modules...
+[00:04] Waiting for more commits...
 ```
 
 ---
 
-# Development Roadmap
-
-## Phase 1 — Foundation
-
-- [x] Project Setup
-- [x] Modular Folder Structure
-- [x] Document Loader
-- [ ] Document Dataclass
-- [ ] Chunking Pipeline
-
----
-
-## Phase 2 — Knowledge Processing
-
-- [ ] Text Embeddings
-- [ ] Metadata Management
-- [ ] ChromaDB Integration
-- [ ] Semantic Search
-
----
-
-## Phase 3 — Memory Engine
-
-- [ ] Conversation Memory
-- [ ] Context Management
-- [ ] Memory Ranking
-- [ ] Long-Term Memory
-- [ ] Intelligent Retrieval
-
----
-
-# Current Project Structure
+# > `tree`
 
 ```text
 MemoraOS/
 
-├── app/
-│   ├── loaders/
-│   ├── chunking/
-│   ├── embeddings/
-│   ├── retrieval/
-│   ├── database/
-│   └── config.py
-│
 ├── data/
 │
-├── tests/
+├── loaders/
+│   └── loader.py
+│
+├── models/
+│   └── document.py
+│
+├── chunking/
+│
+├── embeddings/
+│
+├── retrieval/
+│
+├── database/
+│
+├── config.py
 │
 └── README.md
 ```
 
 ---
 
-# Engineering Goals
-
-This project emphasizes:
-
-- Clean Software Architecture
-- Modular Python Design
-- Information Retrieval
-- Vector Databases
-- Retrieval-Augmented Generation (RAG)
-- AI Memory Systems
-
-Every feature is being implemented step by step rather than relying on end-to-end frameworks.
-
----
-
-# Current Module
+# > `system modules`
 
 ```text
-Module Name
+╔══════════════════════════════════════╗
+║           CORE MODULES               ║
+╚══════════════════════════════════════╝
 
-Document Ingestion Pipeline
+[✓] Document Model
 
-Status
+[✓] PDF Loader
 
-COMPLETE
+[✓] TXT Loader
 
-Responsibilities
+[✓] Recursive Folder Loader
 
-✓ Load PDF Documents
-✓ Load TXT Documents
-✓ Validate Input Files
-✓ Extract Text
-✓ Generate Metadata
-✓ Recursive Folder Traversal
+[ ] Smart Chunking Engine
+
+[ ] Embedding Generator
+
+[ ] ChromaDB Integration
+
+[ ] Semantic Retrieval
+
+[ ] AI Resume Optimizer
+
+[ ] Interview Coach
+
+[ ] Job Tracker
+
+[ ] Streamlit Dashboard
 ```
 
 ---
 
-# Next Mission
+# > `mission progress`
 
 ```text
-Initializing Module...
+MISSION LEVEL
 
-> Document Dataclass
+LEVEL 1  ████████████████████  COMPLETE
 
-Objectives
+    ✓ Document Model
+    ✓ PDF Loader
+    ✓ TXT Loader
+    ✓ Recursive Ingestion
 
-• Create the core Document model
-• Introduce Python dataclasses
-• Add type hints
-• Prepare for chunk generation
+LEVEL 2  ███░░░░░░░░░░░░░░░░░  IN PROGRESS
+
+    □ Smart Chunking
+    □ Metadata Pipeline
+    □ Embeddings
+
+LEVEL 3  ░░░░░░░░░░░░░░░░░░░░
+
+    □ Vector Database
+    □ Semantic Search
+
+LEVEL 4
+
+    □ Resume Intelligence
+    □ Company Insights
+    □ AI Interview Coach
+
+LEVEL 5
+
+    □ Personal AI Career Assistant
 ```
 
 ---
 
-# Why I'm Building This
-
-Most AI projects focus on generating responses.
-
-I wanted to understand **how AI systems remember information**.
-
-MemoraOS is my way of exploring the engineering behind AI memory by implementing every major component—from document ingestion to semantic retrieval—one module at a time.
-
----
-
-# Project Status
+# > `memory status`
 
 ```text
-System Health
+╔══════════════════════════════════════════════════╗
+║              MEMORY DASHBOARD                    ║
+╚══════════════════════════════════════════════════╝
 
-██████░░░░░░░░░░░░░░░░░░░░░░░░░░░ 15%
+Documents Indexed ............... Growing
 
-Current Version
+Knowledge Chunks ............... Pending
 
-v0.1
+Embeddings ..................... Pending
 
-Latest Completed Module
+Applications Logged ............ Pending
 
-✔ Document Ingestion Pipeline
+Companies Stored ............... Pending
 
-Next Target
-
-➜ Document Dataclass
+AI Confidence ................. Loading...
 ```
 
 ---
 
-## Built with curiosity ☕ and lots of debugging.
+# > `achievements`
+
+```text
+🏆 Achievement Unlocked
+
+✓ First Commit
+
+✓ Document Loader
+
+✓ PDF Processing
+
+✓ TXT Processing
+
+✓ UUID Document Model
+
+✓ Recursive File Ingestion
+
+────────────────────────────────────────
+
+🔒 Locked
+
+Semantic Search
+
+Resume Optimizer
+
+Interview Coach
+
+Application Tracker
+
+AI Career Assistant
+
+Offer Letter :)
+```
+
+---
+
+# > `tech stack`
+
+```text
+LANGUAGE
+
+Python
+
+AI
+
+Sentence Transformers
+
+VECTOR DATABASE
+
+ChromaDB
+
+FRONTEND
+
+Streamlit (Coming Soon)
+
+VERSION CONTROL
+
+Git
+GitHub
+```
+
+---
+
+# > `future`
+
+```text
+PHASE 1
+
+Build a memory.
+
+PHASE 2
+
+Teach it to understand.
+
+PHASE 3
+
+Teach it to retrieve.
+
+PHASE 4
+
+Teach it to reason.
+
+PHASE 5
+
+Make it your AI career companion.
+```
+
+---
+
+# > `developer status`
+
+```text
+═══════════════════════════════════════════════════════
+
+Developer      : Medlyn Jacob
+
+Project        : MemoraOS
+
+Version        : v0.1-alpha
+
+Current Status : Building...
+
+Coffee Level   : ██████████████░░ 92%
+
+Motivation     : ████████████████ 100%
+
+Sleep          : Buffer Overflow
+
+Bugs           : Feature Requests in Disguise
+
+Commits        : Increasing...
+
+═══════════════════════════════════════════════════════
+```
+
+---
+
+<div align="center">
+
+## SYSTEM MESSAGE
+
+```text
+"Every great project starts with one commit.
+
+Then another.
+
+Then another.
+
+Until one day...
+people call it impressive."
+```
+
+---
+
+### ☕ Built with coffee, curiosity, and an unreasonable number of commits.
+
+### 🚧 Currently under active development.
+
+### ⭐ Star the repository to save your progress.
+
+---
+
+```bash
+> exit
+
+Saving memories...
+
+Writing commits...
+
+See you in the next build.
+
+Connection terminated.
+```
+
+</div>
