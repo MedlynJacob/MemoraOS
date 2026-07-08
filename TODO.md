@@ -1,0 +1,4 @@
+- Improve chunking strategy
+- Add sentence-aware splitting
+- Handle PDF extraction warnings
+- Add package __init__.py files
