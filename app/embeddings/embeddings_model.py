@@ -29,3 +29,17 @@ def generate_embeddings(chunks: list[Chunk]) -> list[Embedding]:
         raise RuntimeError("No embeddings were generated.")
 
     return embeddings
+
+def generate_query_embedding(query: str) -> list[float]:
+    if not query.strip():
+        raise ValueError("Query cannot be empty.")
+
+    try:
+        response = client.embed(
+            model="nomic-embed-text",
+            input=query
+        )
+    except Exception as e:
+        raise RuntimeError(f"Error generating query embedding: {e}")
+
+    return response["embeddings"][0]

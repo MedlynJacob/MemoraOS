@@ -46,3 +46,14 @@ def reset_collection():
     collection = client.get_or_create_collection(
         name=CHROMA_COLLECTION
     )
+
+
+def count_embeddings() -> int:
+    return collection.count()
+
+def search_embeddings(query_vector: list[float], top_k: int = 5):
+    results = collection.query(
+        query_embeddings=[query_vector],
+        n_results=top_k
+    )
+    return results
