@@ -4,6 +4,32 @@ from config import MAX_FILE_SIZE
 from dataclasses import dataclass
 from models.document import Document
 
+#To find the document type 
+def detect_document_type(filename: str, text: str) -> str:
+    name = filename.lower()
+    sample = text[:1500].lower()
+
+    # Resume detection
+    if "resume" in name or "cv" in name:
+        return "resume"
+
+    if all(keyword in sample for keyword in [
+        "education",
+        "experience",
+        "skills"
+    ]):
+        return "resume"
+
+    # Job description detection
+    if any(keyword in sample for keyword in [
+        "responsibilities",
+        "qualifications",
+        "requirements",
+        "preferred qualifications"
+    ]):
+        return "job_description"
+
+    return "unknown"
 
 #Loader for pdf
 def loader_pdf(filepath):
@@ -49,11 +75,17 @@ def loader_document(filepath):
 
     if not text.strip():
         raise ValueError(f"{filepath} is empty.")
+
+    doc_type = detect_document_type(
+    os.path.basename(filepath),
+    text
+)
     result = Document(
         filename=os.path.basename(filepath),
         filepath=filepath,
         filetype=os.path.splitext(filepath)[1][1:],
         text=text,
+        document_type=doc_type
     )
     
     return result

@@ -16,6 +16,7 @@ class Document:
     filetype: str
     text: str
     category: str = "Uncategorized" 
+    document_type: str = "Unknown"
     company: str | None = None 
     document_id: UUID = field(default_factory=generate_id)
     indexed_at: datetime = field(default_factory=datetime.now)

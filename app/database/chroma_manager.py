@@ -1,6 +1,8 @@
 import chromadb
 from config import CHROMA_DB_PATH, CHROMA_COLLECTION
 client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
+from sklearn.metrics.pairwise import cosine_similarity
+
 
 collection = client.get_or_create_collection(
     name=CHROMA_COLLECTION
@@ -29,6 +31,7 @@ def add_embeddings(document, chunks, embeddings)-> int:
             "filename": document.filename,
             "category": document.category or "",
             "company": document.company or "",
+            "document_type": document.document_type,
         })
         vectors.append(embedding.vector)    
     collection.add(
@@ -51,9 +54,31 @@ def reset_collection():
 def count_embeddings() -> int:
     return collection.count()
 
-def search_embeddings(query_vector: list[float], top_k: int = 5):
-    results = collection.query(
-        query_embeddings=[query_vector],
-        n_results=top_k
-    )
+def search_embeddings(query_vector: list[float], top_k: int = 5, document_type: str | None = None):
+    query_args = {
+    "query_embeddings": [query_vector],
+    "n_results": top_k,
+    "include": ["documents", "metadatas", "embeddings"]
+    }
+    if document_type:
+        query_args["where"] = {
+            "document_type": document_type
+        }
+    
+    results = collection.query(**query_args)
+    if not results["embeddings"][0]:
+        results["similarities"] = []
+        return results
+
+    matrix = cosine_similarity(
+    [query_vector],
+    results["embeddings"][0]
+)
+
+    results["similarities"] = [
+    float(score * 100)
+    for score in matrix[0]
+]
+
     return results
+

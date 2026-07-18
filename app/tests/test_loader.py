@@ -13,3 +13,4 @@ for doc in documents:
     print(f"Indexed At : {doc.indexed_at}")
     print(f"Characters : {len(doc.text)}")
     print(f"Preview    : {doc.text[:200]}...")
+    print(f"Type       : {doc.document_type}")
