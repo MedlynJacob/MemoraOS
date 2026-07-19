@@ -54,19 +54,24 @@ def reset_collection():
 def count_embeddings() -> int:
     return collection.count()
 
-def search_embeddings(query_vector: list[float], top_k: int = 5, document_type: str | None = None):
+def search_embeddings(query_vector: list[float], top_k: int = 5, document_type: str | None = None, company: str | None = None):
     query_args = {
     "query_embeddings": [query_vector],
     "n_results": top_k,
     "include": ["documents", "metadatas", "embeddings"]
     }
+    filters = []
     if document_type:
-        query_args["where"] = {
-            "document_type": document_type
-        }
+        filters.append({"document_type": document_type})
+    if company:
+        filters.append({"company": company})
+    if len(filters) == 1:
+        query_args["where"] = filters[0]
+    elif len(filters) > 1:
+        query_args["where"] = { "$and": filters }
     
     results = collection.query(**query_args)
-    if not results["embeddings"][0]:
+    if len(results["embeddings"][0]) == 0:
         results["similarities"] = []
         return results
 

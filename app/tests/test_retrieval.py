@@ -1,11 +1,18 @@
 from embeddings.embeddings_model import generate_query_embedding
 from database.chroma_manager import search_embeddings
+from database.chroma_manager import collection
 
-query = "Machine Learning"
+data = collection.get(include=["metadatas"])
+
+print(data["metadatas"][:5])
+
+query = "tell me about my Apex CPU project"
 
 query_vector = generate_query_embedding(query)
 
-results = search_embeddings(query_vector,document_type="resume")
+results = search_embeddings(
+    query_vector
+)
 
 print("Query:")
 print(query)
