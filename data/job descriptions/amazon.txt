@@ -1,0 +1,44 @@
+Amazon Software Development Engineer
+
+Description
+At Audible, we believe stories have the power to transform lives. It’s why we work with some of the world’s leading creators to produce and share audio storytelling with our millions of global listeners. We are dreamers and inventors who come from a wide range of backgrounds and experiences to empower and inspire each other. Imagine your future with us.
+
+ABOUT THIS ROLE
+As a Software Development Engineer, it’s up to you to define, design and refine the tech that keeps us one step ahead of listeners. Anticipate. Innovate. Bring challenging ideas and we’ll support you with the latest tech, tools and systems that you need to succeed. You’ll be essential in ensuring the team can reach their potential; working closely with them, reviewing their work, mentoring, and supporting them to develop. Together, you’ll build and maintain our platform to bring thousands of stories to millions of listeners and unleash the power of the human voice.
+
+ABOUT THE TEAM
+Audible’s Creators are talented storytellers, voice actors, producers, publishers and our internal content teams. Our teams build innovative tools that let our experts focus on creation while helping them bring their art to millions of listeners. We are customer obsessed and the tools we build are intuitive and easy to use, ensuring that technology aids the creativity to provide the best in class experience to listeners. By focusing on our creators, we also create value for Audible’s global consumers by helping them discover new content, talent and stories they love and share.
+
+ABOUT YOU
+You feel pride in every step forward, however big or small; to you, each challenge represents a well-executed venture to support our creators and listeners. If you’re looking to build on your skills and grow into a leader, this is your next step. We look for people who take responsibility, set their standards high and see every failure as an opportunity to learn. You’re looking for an environment where you can thrive. With opportunities to challenge yourself and a talented team by your side, you’ll find what you’re looking for at Audible.
+
+As a Software Development Engineer, you will...
+- Design, develop, and test software components and applications for one of the largest creator and provider of audiobooks in the world
+- Collaborate on an agile engineering team, writing scalable and maintainable code and influencing team decisions
+- Collaborate with stakeholders to envision, design, develop, test, and launch customer-centric software solutions
+- Utilize technology to tackle challenging problems and deliver high-quality code on schedule
+- Demonstrate proficiency in a wide range of data structures and algorithms, applying them effectively
+- Independently clarify technical requirements, assess development estimates, and employ diverse design approaches
+- Conduct code reviews and provide constructive feedback to team members
+- Foster continuous improvement in software quality, customer experience, and product maintainability
+- Mentor and lead developers, fostering curiosity and deep technical understanding
+
+ABOUT AUDIBLE
+Audible is the leading producer and provider of audio storytelling. We spark listeners’ imaginations, offering immersive, cinematic experiences full of inspiration and insight to enrich our customers daily lives. We are a global company with an entrepreneurial spirit. We are dreamers and inventors who are passionate about the positive impact Audible can make for our customers and our neighbors. This spirit courses throughout Audible, supporting a culture of creativity and inclusion built on our People Principles and our mission to build more equitable communities in the cities we call home.
+
+Basic Qualifications
+- 3+ years of non-internship professional software development experience
+- 2+ years of non-internship design or architecture (design patterns, reliability and scaling) of new and existing systems experience
+- Experience programming with at least one software programming language
+- Experience scripting or coding
+
+Preferred Qualifications
+- 3+ years of full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations experience
+- Bachelor's degree in computer science or equivalent
+- Experience handling ambiguous or undefined challenges through strong problem solving abilities
+- Experience building complex software systems that have been successfully delivered to customers
+- Knowledge of cloud services such as AWS or equivalent
+- Experience creating and delivering written and oral communications for technical and non-technical audiences
+- Experience programmatically testing products, measuring test coverage, developing the best automation, driving testability and diagnostic
+
+Amazon is an equal opportunity employer and does not discriminate on the basis of protected veteran status, disability, or other legally protected status.

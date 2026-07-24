@@ -2,3 +2,4 @@
 - Add sentence-aware splitting
 - Handle PDF extraction warnings
 - Add package __init__.py files
+- Messages in history retrieve only last 6??

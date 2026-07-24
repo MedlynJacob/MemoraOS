@@ -11,7 +11,6 @@ def retrieve(query: str, top_k: int = 3, document_type: str | None = None, compa
     query_vector = generate_query_embedding(query)
 
 
-
     results = search_embeddings(
         query_vector=query_vector,
         top_k=top_k,
