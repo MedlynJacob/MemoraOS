@@ -1,8 +1,9 @@
 <div align="center">
 
-# 💾 MEMORAOS
+# 💾 MemoraOS
 
 ### *Your AI Second Brain for Learning, Building, and Career Growth*
+> **A local-first AI memory operating system that turns resumes, projects, notes, and job descriptions into a searchable conversational knowledge base powered by Retrieval-Augmented Generation (RAG).**
 
 <img src="https://readme-typing-svg.demolab.com?font=VT323&size=30&pause=1200&color=39FF14&center=true&vCenter=true&width=700&lines=Booting+MemoraOS...;Loading+Memory+Engine...;Connecting+AI+Core...;Ready." />
 
@@ -31,11 +32,15 @@ $ memora boot
 
 Initializing Memory Engine...
 Loading Documents...
+Detecting Document Types...
 Generating Embeddings...
-Connecting Vector Database...
+Connecting ChromaDB...
+Loading Conversation Memory...
+Local LLM Connected.
+
 System Ready.
 
-Welcome back, Medlyn.
+Welcome back.
 ```
 
 ---
@@ -73,37 +78,45 @@ The goal is to build a personal AI second brain that grows with every document, 
 # > architecture
 
 ```text
-
                     Documents
-                        |
-                        v
+                        │
+                        ▼
                 Document Loader
-                        |
-                        v
+                        │
+        ┌───────────────┴───────────────┐
+        ▼                               ▼
+ Detect Document Type           Detect Company
+        │                               │
+        └───────────────┬───────────────┘
+                        ▼
                 Document Objects
-                        |
-                        v
+                        │
+                        ▼
                  Chunking Engine
-                        |
-                        v
+                        │
+                        ▼
               Text Chunks + Metadata
-                        |
-                        v
+                        │
+                        ▼
             Ollama Embedding Pipeline
-                        |
-                        v
-              Vector Representations
-                        |
-                        v
-                  ChromaDB
-                        |
-                        v
-             Semantic Retrieval
-                        |
-                        v
-                  LLM Response
-
-
+                        │
+                        ▼
+                  ChromaDB Storage
+                        │
+                        ▼
+              Metadata-aware Retrieval
+                        │
+                        ▼
+               Context Formatter
+                        │
+                        ▼
+               Prompt Generation
+                        │
+                        ▼
+                Ollama Local LLM
+                        │
+                        ▼
+                 Conversational AI
 ```
 
 ---
@@ -116,36 +129,38 @@ LEVEL 1 ████████████████████ COMPLETE �
 ✓ Document Model
 ✓ PDF/TXT Loader
 ✓ Recursive File Ingestion
-✓ Document Metadata Tracking
+✓ Automatic Document Type Detection
+✓ Company Detection
+✓ Metadata Tracking
 
 
 LEVEL 2 ████████████████████ COMPLETE ✅
 
 ✓ Chunk Model
-✓ Text Chunking with Overlap
-✓ UUID Based Document-Chunk Linking
+✓ Overlapping Text Chunking
+✓ UUID Document-Chunk Linking
 ✓ Ollama Embedding Pipeline
-✓ 768 Dimension Vector Generation
 ✓ ChromaDB Persistent Storage
+✓ Metadata-aware Vector Storage
 
 
-LEVEL 3 ████████░░░░░░░░░░░░
+LEVEL 3 ████████████████████ COMPLETE ✅
 
 ✓ Semantic Search
-□ RAG Generation Pipeline
-□ Local LLM Integration
-□ Context-Aware Responses
-□ Conversation Memory
+✓ Metadata Filtering
+✓ RAG Generation Pipeline
+✓ Local LLM Integration
+✓ Context-aware Responses
+✓ Conversation Memory
 
 
-LEVEL 4
+LEVEL 4 ███░░░░░░░░░░░░░░░░
 
 □ Resume Intelligence
-□ Job Description Matching
+□ Resume ↔ Job Matching
 □ Interview Coach
 □ Job Tracker
 □ Career Analytics
-
 ```
 
 ---
@@ -155,47 +170,31 @@ LEVEL 4
 MemoraOS can currently:
 
 ```text
-✓ Ingest PDF documents
+✓ Ingest PDF and TXT documents
 
-✓ Extract and store document metadata
+✓ Automatically classify documents
+    - Resume
+    - Job Description
 
-✓ Split documents into meaningful overlapping chunks
+✓ Detect associated companies
 
-✓ Generate semantic embeddings using Ollama
+✓ Store rich metadata
+
+✓ Split documents into overlapping chunks
+
+✓ Generate semantic embeddings locally
 
 ✓ Store vectors in ChromaDB
 
-✓ Perform similarity-based retrieval
+✓ Perform metadata-aware semantic retrieval
 
-✓ Trace retrieved chunks back to original documents
+✓ Maintain conversation history
 
+✓ Generate grounded responses using a local LLM
+
+✓ Refuse to hallucinate when information is unavailable
 ```
 
-Example:
-
-```bash
-Query:
-
-"Machine Learning"
-
-
-Retrieved:
-
-Result #1
-------------------------------
-Resume Section:
-Machine Learning, Deep Learning,
-Computer Vision, NLP, RAG...
-
-
-Result #2
-------------------------------
-Education:
-Relevant Coursework:
-Machine Learning,
-Artificial Intelligence...
-
-```
 
 ---
 
@@ -211,8 +210,9 @@ AI / ML
 ---------
 Ollama
 nomic-embed-text
-Vector Embeddings
-Retrieval-Augmented Generation
+Retrieval-Augmented Generation (RAG)
+Prompt Engineering
+Metadata-aware Semantic Search
 
 
 Storage
@@ -234,48 +234,6 @@ Metadata Storage
 Semantic Search
 Vector Similarity
 Modular AI Pipeline
-
-```
-
----
-
-# > project structure
-
-```text
-MemoraOS
-│
-├── data/
-│   └── documents
-│
-├── storage/
-│   └── chroma_db
-│
-├── app/
-│   │
-│   ├── loaders/
-│   │   └── document_loader.py
-│   │
-│   ├── models/
-│   │   ├── document.py
-│   │   ├── chunk.py
-│   │   └── embeddings.py
-│   │
-│   ├── chunking/
-│   │   └── text_splitter.py
-│   │
-│   ├── embeddings/
-│   │   └── embeddings.py
-│   │
-│   ├── database/
-│   │   └── chroma_manager.py
-│   │
-│   ├── retrieval/
-│   │
-│   ├── tests/
-│   │
-│   └── main.py
-│
-└── README.md
 
 ```
 
@@ -335,12 +293,12 @@ Vector databases allow this semantic understanding.
 # > achievements
 
 ```text
+
 🏆 UNLOCKED
 
-
-✓ First Commit
-
 ✓ Document Loader
+
+✓ Automatic Metadata Extraction
 
 ✓ PDF Processing Pipeline
 
@@ -348,66 +306,70 @@ Vector databases allow this semantic understanding.
 
 ✓ UUID Chunk Model
 
-✓ Overlapping Text Chunking
+✓ Recursive Document Ingestion
+
+✓ Overlapping Chunking
 
 ✓ Ollama Embedding Pipeline
 
-✓ 768 Dimension Vector Generation
+✓ ChromaDB Integration
 
-✓ ChromaDB Vector Storage
+✓ Metadata-aware Semantic Search
 
-✓ Semantic Retrieval
+✓ Local RAG Chatbot
+
+✓ Conversation Memory
+
+✓ Grounded Responses
 
 
-──────────────────────────
+────────────────────────────
 
 
 🔒 LOCKED
 
+Resume Match Analysis
 
-RAG Generation
-
-Memory Consolidation
-
-Resume Intelligence
+Resume Tailoring
 
 Interview Coach
 
-Job Tracker
+Application Tracker
+
+Knowledge Graph
+
+Long-term Memory
 
 Offer Letter :)
-
-```
+``` 
 
 ---
 
 # > roadmap
 
 ```text
-
-Phase 1
--------
-Document Intelligence
+v0.1
+------
+Local RAG Foundation
 [COMPLETE]
 
 
-Phase 2
--------
-Semantic Memory
-[COMPLETE]
-
-
-Phase 3
--------
-AI Reasoning Layer
+v0.2
+------
+Resume Intelligence
 [IN PROGRESS]
 
 
-Phase 4
--------
-Career Intelligence Platform
+v0.3
+------
+Career Assistant
 [PLANNED]
 
+
+v1.0
+------
+Personal AI Memory Operating System
+[COMING SOON]
 ```
 
 ---
@@ -415,18 +377,23 @@ Career Intelligence Platform
 # > system status
 
 ```text
-Developer    : Medlyn Jacob
+Developer     : Medlyn Jacob
 
-Version      : v0.2-alpha
+Version       : v0.2-alpha
 
-Coffee       : ██████████████░░
+Engine        : Ollama
 
-Motivation   : ████████████████
+Embeddings    : nomic-embed-text
 
-Sleep        : NULL
+Database      : ChromaDB
 
-Status       : Building...
+Coffee        : ███████████████░
 
+Motivation    : ████████████████
+
+Sleep         : NULL
+
+Status        : Online
 ```
 
 ---
