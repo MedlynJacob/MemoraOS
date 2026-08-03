@@ -96,35 +96,50 @@ Important:
 - Soft skills such as communication, teamwork, and problem solving should not be marked missing if the resume demonstrates related evidence.
 - Do not list a requirement as missing if the resume contains equivalent experience.
 
-Return ONLY this format:
+Your response MUST exactly follow the template below.
 
-Match Score:
-- XX%
+Do not add any text before it.
+Do not add any text after it.
+Do not change the headings.
+Do not omit any heading.
+Do not reorder the headings.
 
-Strong Matches:
-- 
-- 
+If a section has nothing to say, write:
 
-Missing Requirements:
+None
+
+Use exactly these headings:
+
+=== MATCH SCORE ===
+xx%
+
+=== STRONG MATCHES ===
+- strong keywords used
+- projects, experience and skills that are relevant with the job thats present in the resume
+
+=== MISSING REQUIREMENTS ===
 - Only include requirements that are explicitly required by the job description AND completely absent from the resume.
 - Before adding anything here, verify that the resume does not mention an equivalent technology or experience.
 - Never list AWS, Python, databases, programming languages, or tools as missing if they appear anywhere in the resume.
 
-Experience Gaps:
+=== EXPERIENCE GAPS ===
 - Mention missing years of experience or seniority requirements separately.
 - Do not say the candidate has no experience if related experience exists.
 -Do not penalize candidates for lack of industry/domain experience unless explicitly required.
 
-Relevant Projects:
+=== RELEVANT PROJECTS ===
 - Include 1-3 projects that demonstrate skills relevant to the job.
 - Explain why they are relevant.
 
-Resume Improvements:
+
+=== RESUME IMPROVEMENTS ===
 - Give actionable suggestions based on gaps.
 - Do not suggest adding fake experience.
 
-Interview Preparation:
+=== INTERVIEW PREPARATION ===
 - List technical topics the candidate should prepare for this role.
+
+
 
 Resume:
 {resume_context}

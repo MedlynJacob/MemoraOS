@@ -1,0 +1,36 @@
+[
+    {
+        "company": "meta",
+        "role": "software engineer",
+        "job_platform": "LinkedIn",
+        "job_link": "xguwvcuqc",
+        "resume_used": "None",
+        "document_id": "None",
+        "status": "Applied",
+        "referral": null,
+        "location": "Remote",
+        "salary_offered": null,
+        "interview_date": null,
+        "notes": null,
+        "date_applied": "2026-08-02T23:42:50.012382",
+        "follow_up_date": "2026-08-16T23:42:50.012389",
+        "application_id": "7fe4d71b-4a37-4d88-ba03-0fe5c33961f4"
+    },
+    {
+        "company": "google ",
+        "role": "solutions architect",
+        "job_platform": "LinkedIn",
+        "job_link": "biqboqocq",
+        "resume_used": "None",
+        "document_id": "None",
+        "status": "Applied",
+        "referral": null,
+        "location": "Remote",
+        "salary_offered": null,
+        "interview_date": null,
+        "notes": null,
+        "date_applied": "2026-08-02T23:46:16.018945",
+        "follow_up_date": "2026-08-16T23:46:16.018952",
+        "application_id": "52bef01e-dd14-4fdf-93f1-d6d9cd8f8671"
+    }
+]

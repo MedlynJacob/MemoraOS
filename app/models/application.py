@@ -14,9 +14,9 @@ class Application:
     company: str
     role: str
     job_platform: str #Linkedin, Indeed, Handshake etc
-    resume_used: UUID # Resume's document ID
     job_link: str
-    document_id: UUID # Job Description ID
+    resume_used: UUID | None = None # Resume's document ID
+    document_id: UUID | None = None # Job Description ID
 
     status: str = "Applied" # Includes "Applied", "OA Scheduled","OA Completed","Interview" "Offer", "Rejected", "Withdrawn"
     referral: str | None = None
