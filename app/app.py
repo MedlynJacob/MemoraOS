@@ -2,6 +2,7 @@ import streamlit as st
 from analysis.resume_job_analyser import analyze_resume
 from analysis.analysis_parser import parse_analysis
 from ui.applications import show_applications
+from ui.dashboard import show_dashboard
 import re
 
 page = st.sidebar.radio(
@@ -15,7 +16,7 @@ page = st.sidebar.radio(
 )
 
 if page == "🏠 Dashboard":
-    st.header("Dashboard")
+    show_dashboard()
 
 # Resume Analyser
 elif page == "📄 Resume Analyzer":
