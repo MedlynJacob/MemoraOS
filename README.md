@@ -2,17 +2,18 @@
 
 # 💾 MemoraOS
 
-### *Your AI Second Brain for Learning, Building, and Career Growth*
-> **A local-first AI memory operating system that turns resumes, projects, notes, and job descriptions into a searchable conversational knowledge base powered by Retrieval-Augmented Generation (RAG).**
+### *Your AI Career Operating System*
 
-<img src="https://readme-typing-svg.demolab.com?font=VT323&size=30&pause=1200&color=39FF14&center=true&vCenter=true&width=700&lines=Booting+MemoraOS...;Loading+Memory+Engine...;Connecting+AI+Core...;Ready." />
+> **A local-first AI career assistant that combines resume intelligence, job application tracking, and AI-powered career insights into a personal workspace.**
+
+<img src="https://readme-typing-svg.demolab.com?font=VT323&size=30&pause=1200&color=39FF14&center=true&vCenter=true&width=700&lines=Booting+MemoraOS...;Loading+Career+Engine...;Initializing+AI+Core...;System+Ready." />
 
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
-![AI](https://img.shields.io/badge/AI-Powered-purple?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Building-success?style=for-the-badge)
-![RAG](https://img.shields.io/badge/RAG-Pipeline-orange?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-Ollama-purple?style=for-the-badge)
+![RAG](https://img.shields.io/badge/RAG-Foundation-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-v1.0--alpha-success?style=for-the-badge)
 
 </div>
 
@@ -30,13 +31,11 @@
 ```bash
 $ memora boot
 
-Initializing Memory Engine...
-Loading Documents...
-Detecting Document Types...
-Generating Embeddings...
-Connecting ChromaDB...
-Loading Conversation Memory...
-Local LLM Connected.
+Initializing Career Engine...
+Loading Resume Intelligence...
+Connecting Ollama...
+Loading Application Database...
+Checking Career Pipeline...
 
 System Ready.
 
@@ -47,193 +46,284 @@ Welcome back.
 
 # > whoami
 
-**MemoraOS** is a local-first AI memory system designed to organize and retrieve knowledge from my software engineering journey.
+**MemoraOS** is a personal AI career operating system designed to organize, analyze, and improve my software engineering journey.
 
-Instead of manually searching through:
+The project started as a local-first AI memory system focused on Retrieval-Augmented Generation (RAG). While building the foundation, the project evolved into solving a more immediate problem:
 
-* Resume versions
-* Technical notes
-* Project documentation
-* Code explanations
-* Learning material
+> Managing and improving my job search process.
 
-MemoraOS aims to provide an intelligent interface where I can ask:
+MemoraOS combines:
 
-```bash
-> Which resume did I send to Amazon?
+* Resume intelligence
+* Job description analysis
+* Resume similarity matching
+* Application tracking
+* Career analytics
 
-> Summarize my Operating Systems notes.
-
-> Match my resume to this job description.
-
-> Generate interview questions based on my projects.
-
-> Explain the code I wrote six months ago.
-```
-
-The goal is to build a personal AI second brain that grows with every document, project, and experience.
-
----
-
-# > architecture
-
-```text
-                    Documents
-                        │
-                        ▼
-                Document Loader
-                        │
-        ┌───────────────┴───────────────┐
-        ▼                               ▼
- Detect Document Type           Detect Company
-        │                               │
-        └───────────────┬───────────────┘
-                        ▼
-                Document Objects
-                        │
-                        ▼
-                 Chunking Engine
-                        │
-                        ▼
-              Text Chunks + Metadata
-                        │
-                        ▼
-            Ollama Embedding Pipeline
-                        │
-                        ▼
-                  ChromaDB Storage
-                        │
-                        ▼
-              Metadata-aware Retrieval
-                        │
-                        ▼
-               Context Formatter
-                        │
-                        ▼
-               Prompt Generation
-                        │
-                        ▼
-                Ollama Local LLM
-                        │
-                        ▼
-                 Conversational AI
-```
+The long-term vision is to build a personal AI career assistant that understands my experience, projects, skills, and professional growth.
 
 ---
 
 # > mission status
 
 ```text
-LEVEL 1 ████████████████████ COMPLETE ✅
 
-✓ Document Model
-✓ PDF/TXT Loader
-✓ Recursive File Ingestion
-✓ Automatic Document Type Detection
-✓ Company Detection
-✓ Metadata Tracking
+VERSION 1.0 ████████████████████ COMPLETE ✅
 
 
-LEVEL 2 ████████████████████ COMPLETE ✅
+RESUME INTELLIGENCE
 
-✓ Chunk Model
-✓ Overlapping Text Chunking
-✓ UUID Document-Chunk Linking
-✓ Ollama Embedding Pipeline
-✓ ChromaDB Persistent Storage
-✓ Metadata-aware Vector Storage
+✓ Resume Processing
 
+✓ Job Description Processing
 
-LEVEL 3 ████████████████████ COMPLETE ✅
+✓ Resume ↔ Job Similarity Analysis
 
-✓ Semantic Search
-✓ Metadata Filtering
-✓ RAG Generation Pipeline
-✓ Local LLM Integration
-✓ Context-aware Responses
-✓ Conversation Memory
+✓ ATS-style Matching Insights
+
+✓ AI-powered Resume Evaluation
 
 
-LEVEL 4 ███░░░░░░░░░░░░░░░░
+APPLICATION MANAGEMENT
 
-□ Resume Intelligence
-□ Resume ↔ Job Matching
-□ Interview Coach
-□ Job Tracker
-□ Career Analytics
+✓ Add Applications
+
+✓ Edit Applications
+
+✓ Delete Applications
+
+✓ Track Application Status
+
+✓ Track Referrals
+
+✓ Store Notes
+
+✓ Track Locations
+
+✓ Manage Follow-ups
+
+
+AI FOUNDATION
+
+✓ Ollama Local LLM Integration
+
+✓ Local AI Processing
+
+✓ RAG Architecture Foundation
+
+✓ Modular AI Pipeline
+
+
+ANALYTICS
+
+✓ Career Dashboard
+
+✓ Application Pipeline Tracking
+
+
+
+VERSION 2.0 ████░░░░░░░░░░░░░░░
+
+
+□ Resume Optimization
+
+□ Resume Version Control
+
+□ AI Job Recommendations
+
+□ Interview Preparation
+
+□ Career Insights
+
+
+
+VERSION 3.0 ██░░░░░░░░░░░░░░░░░
+
+
+□ Personal AI Career Memory
+
+□ Project Intelligence
+
+□ Knowledge Graph
+
+□ AI Career Companion
+
+```
+
+---
+
+# > architecture
+
+```text
+
+                 User Interface
+                       |
+                       ▼
+                  Streamlit App
+                       |
+        ┌──────────────┴──────────────┐
+        ▼                             ▼
+
+ Resume Intelligence          Application Tracker
+
+        |                             |
+        ▼                             ▼
+
+ Document Processing          Application Manager
+
+        |                             |
+        ▼                             ▼
+
+ Similarity Engine            JSON Storage
+
+        |
+        ▼
+
+ Ollama AI Engine
+
+        |
+        ▼
+
+ Career Insights
+
+
+Future:
+
+Documents
+    |
+    ▼
+RAG Pipeline
+    |
+    ▼
+Vector Database
+    |
+    ▼
+Personal AI Memory
+
 ```
 
 ---
 
 # > current capabilities
 
-MemoraOS can currently:
+MemoraOS v1 currently provides:
 
 ```text
-✓ Ingest PDF and TXT documents
 
-✓ Automatically classify documents
-    - Resume
-    - Job Description
+RESUME INTELLIGENCE
+-------------------
 
-✓ Detect associated companies
+✓ Upload and process resumes
 
-✓ Store rich metadata
+✓ Analyze job descriptions
 
-✓ Split documents into overlapping chunks
+✓ Compare resume against job requirements
 
-✓ Generate semantic embeddings locally
+✓ Generate similarity-based matching insights
 
-✓ Store vectors in ChromaDB
+✓ Provide ATS-style evaluation
 
-✓ Perform metadata-aware semantic retrieval
 
-✓ Maintain conversation history
 
-✓ Generate grounded responses using a local LLM
+APPLICATION TRACKING
+--------------------
 
-✓ Refuse to hallucinate when information is unavailable
+✓ Track job applications
+
+✓ Store company information
+
+✓ Store role information
+
+✓ Track application status
+
+
+Supported statuses:
+
+    Applied
+    OA Scheduled
+    OA Completed
+    Interview
+    Offer
+    Rejected
+    Withdrawn
+
+
+✓ Track referrals
+
+✓ Store application notes
+
+✓ Track locations
+
+✓ Manage application pipeline
+
+
+
+AI FEATURES
+------------
+
+✓ Ollama Local LLM Integration
+
+✓ Local AI Processing
+
+✓ RAG-ready architecture
+
+✓ Modular AI components
+
+
+
+ANALYTICS
+---------
+
+✓ Application dashboard
+
+✓ Career progress overview
+
+✓ Pipeline visualization
+
 ```
-
 
 ---
 
 # > technology stack
 
 ```text
+
 Language
 ---------
 Python
 
 
+Frontend
+---------
+Streamlit
+
+
 AI / ML
 ---------
 Ollama
-nomic-embed-text
+Large Language Models
+Resume Similarity Analysis
 Retrieval-Augmented Generation (RAG)
-Prompt Engineering
-Metadata-aware Semantic Search
-
-
-Storage
----------
-ChromaDB
-Persistent Vector Database
 
 
 Document Processing
 ---------
-PyPDF
-Custom Document Loader
+PDF Processing
+Text Extraction
+Document Modeling
 
 
-Architecture Concepts
+Storage
 ---------
-UUID Based Entity Tracking
-Metadata Storage
-Semantic Search
-Vector Similarity
-Modular AI Pipeline
+JSON Persistence
+
+
+Architecture
+---------
+Object-Oriented Design
+CRUD Architecture
+Modular Components
+Local-first Design
 
 ```
 
@@ -241,52 +331,79 @@ Modular AI Pipeline
 
 # > engineering decisions
 
-## Why UUIDs?
+## Why local-first?
 
-MemoraOS follows database-style entity relationships.
+MemoraOS is designed around privacy and ownership.
 
-A document owns multiple chunks:
+Career information contains sensitive data:
+
+* Resumes
+* Applications
+* Personal notes
+* Career history
+
+Keeping processing local provides:
 
 ```text
-Document
-    |
-    |
-    +---- Chunk 0
-    |
-    +---- Chunk 1
-    |
-    +---- Chunk 2
+
+✓ Data ownership
+
+✓ Privacy
+
+✓ Offline capability
+
+✓ Full control
 
 ```
-
-Each chunk stores the parent document ID, allowing retrieval results to trace back to the original source.
 
 ---
 
-## Why ChromaDB?
+## Why Ollama?
 
-Traditional databases store structured information.
+Instead of depending completely on cloud APIs, MemoraOS uses local AI models.
 
-MemoraOS needs to answer questions based on meaning, not exact keywords.
-
-Example:
-
-Searching:
+Benefits:
 
 ```text
-"AI projects"
-```
 
-should retrieve:
+✓ Privacy
 
-```text
-"Machine Learning Model for Sleep Apnea Detection"
+✓ No API dependency
+
+✓ Local experimentation
+
+✓ Full control over AI pipeline
 
 ```
 
-even though the words are different.
+---
 
-Vector databases allow this semantic understanding.
+## Why modular architecture?
+
+MemoraOS separates responsibilities:
+
+```text
+
+Resume
+  |
+  ▼
+Document Processing
+  |
+  ▼
+AI Analysis
+
+
+Application
+  |
+  ▼
+Application Manager
+  |
+  ▼
+Storage Layer
+
+```
+
+This allows future AI capabilities to be added without rewriting the foundation.
 
 ---
 
@@ -296,80 +413,85 @@ Vector databases allow this semantic understanding.
 
 🏆 UNLOCKED
 
-✓ Document Loader
 
-✓ Automatic Metadata Extraction
+✓ Resume Intelligence Engine
 
-✓ PDF Processing Pipeline
+✓ ATS-style Resume Matching
 
-✓ UUID Document Model
+✓ Ollama Integration
 
-✓ UUID Chunk Model
+✓ Career Application Tracker
 
-✓ Recursive Document Ingestion
+✓ Dashboard Analytics
 
-✓ Overlapping Chunking
+✓ CRUD Application Architecture
 
-✓ Ollama Embedding Pipeline
+✓ Local Data Persistence
 
-✓ ChromaDB Integration
-
-✓ Metadata-aware Semantic Search
-
-✓ Local RAG Chatbot
-
-✓ Conversation Memory
-
-✓ Grounded Responses
+✓ Modular Python Architecture
 
 
 ────────────────────────────
 
 
-🔒 LOCKED
+🔒 NEXT UNLOCKS
 
-Resume Match Analysis
 
-Resume Tailoring
+Resume Optimization
 
 Interview Coach
 
-Application Tracker
+AI Career Assistant
 
-Knowledge Graph
+Career Memory System
 
-Long-term Memory
-
-Offer Letter :)
-``` 
+```
 
 ---
 
 # > roadmap
 
 ```text
-v0.1
-------
-Local RAG Foundation
-[COMPLETE]
-
-
-v0.2
-------
-Resume Intelligence
-[IN PROGRESS]
-
-
-v0.3
-------
-Career Assistant
-[PLANNED]
-
 
 v1.0
 ------
+Career Intelligence Foundation
+
+[COMPLETE]
+
+
+v2.0
+------
+AI Career Assistant
+
+Features:
+
+□ Resume Optimization
+
+□ Interview Preparation
+
+□ Job Recommendations
+
+□ Career Insights
+
+
+v3.0
+------
 Personal AI Memory Operating System
-[COMING SOON]
+
+Features:
+
+□ Long-term Memory
+
+□ Knowledge Graph
+
+□ Project Intelligence
+
+□ AI Career Companion
+
+
+COMING SOON
+
 ```
 
 ---
@@ -377,15 +499,19 @@ Personal AI Memory Operating System
 # > system status
 
 ```text
+
 Developer     : Medlyn Jacob
 
-Version       : v0.2-alpha
+Version       : v1.0-alpha
 
-Engine        : Ollama
+Current Mode  : Career Intelligence
 
-Embeddings    : nomic-embed-text
+AI Engine     : Ollama
 
-Database      : ChromaDB
+Framework     : Streamlit
+
+Storage       : Local JSON
+
 
 Coffee        : ███████████████░
 
@@ -393,7 +519,9 @@ Motivation    : ████████████████
 
 Sleep         : NULL
 
-Status        : Online
+
+Status        : ONLINE
+
 ```
 
 ---
@@ -407,9 +535,9 @@ Status        : Online
 ```bash
 > exit
 
-Saving memories...
+Saving career data...
 Writing commits...
-See you in the next build.
+Preparing next evolution...
 
 Connection terminated.
 ```
