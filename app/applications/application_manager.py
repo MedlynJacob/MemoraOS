@@ -23,6 +23,9 @@ class ApplicationManager:
 
         return self.storage.update(application)
 
+    def update_application(self, application: Application):
+        return self.storage.update(application)
+
     def get_all_applications(self):
         return self.storage.load()
 
@@ -54,3 +57,10 @@ class ApplicationManager:
     
     def get_application_by_id(self, application_id: UUID):
         return self.storage.get_by_id(application_id)
+
+    def delete_application(self, application_id: UUID):
+        application = self.storage.get_by_id(application_id)
+        if application is None:
+            return False
+        self.storage.delete(application)
+        return True

@@ -11,58 +11,50 @@ def show_dashboard():
 
     stats = manager.get_application_stats()
 
-    st.subheader("Application Overview")
+    st.subheader("📊 Application Overview")
 
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        st.metric(
-            "Total Applications",
-            stats["Total"]
-        )
+        st.info(f""" ### {stats["Total"]} Total Applications""")
 
     with col2:
-        st.metric(
-            "Applied",
-            stats["Applied"]
-        )
+        st.info(f""" ### {stats["Applied"]} Applications Sent""")
 
     with col3:
-        st.metric(
-            "Interviews",
-            stats["Interview"]
-        )
+        st.warning(f""" ### {stats["Interview"]} Interviews""")
 
     with col4:
-        st.metric(
-            "Offers",
-            stats["Offer"]
-        )
-
+        st.success(f""" ### {stats["Offer"]} Offers""")
 
     st.divider()
 
 
-    st.subheader("Recent Applications")
+    st.subheader("📈 Pipeline")
 
-    applications = manager.get_all_applications()
+    statuses = [
+        "Applied",
+        "OA Scheduled",
+        "OA Completed",
+        "Interview",
+        "Offer",
+        "Rejected",
+        "Withdrawn"
+    ]
+
+    applications= manager.get_all_applications()
 
 
     if not applications:
-        st.info("No applications yet.")
+        st.info("No applications tracked yet")
         return
 
+    counts={}
 
-    for app in applications[-5:]:
+    for status in statuses:
+        counts[status]=len([app for app in applications if app.status == status])
 
-        st.write(
-            f"""
-            **{app.company}**
-            
-            Role: {app.role}
-
-            Status: {app.status}
-
-            Applied: {app.date_applied.strftime("%d %b %Y")}
-            """
-        )
+    for status, count in counts.items():
+        st.write(f"**{status}**")
+        st.progress(count / max(stats["Total"],1))
+        st.caption(f"{count} applications")
