@@ -3,4 +3,6 @@ pandas
 chromadb
 scikit-learn
 ollama==0.6.2
+huggingface_hub
 pypdf
+python-dotenv

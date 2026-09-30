@@ -10,12 +10,22 @@ SECTION_HEADERS = {
 
 
 def parse_analysis(analysis: str) -> dict:
-    result = {}
+    result = {
+        "score": "N/A",
+        "strong_matches": "None",
+        "missing_requirements": "None",
+        "experience_gaps": "None",
+        "projects": "None",
+        "resume_improvements": "None",
+        "interview_preparation": "None",
+    }
+
+    if not analysis:
+        return result
 
     current_section = None
 
     for line in analysis.splitlines():
-
         line = line.strip()
 
         if not line:
@@ -29,15 +39,17 @@ def parse_analysis(analysis: str) -> dict:
         if current_section:
             result[current_section] += line + "\n"
 
-    # Clean whitespace
     for key in result:
         result[key] = result[key].strip()
 
-    # Extract numeric score
-    if "score" in result:
-        score = result["score"].replace("%", "").strip()
-        result["score"] = score
-    else:
-        result["score"] = "N/A"
+        if not result[key]:
+            result[key] = "None"
+
+    if result["score"] != "N/A":
+        result["score"] = (
+            result["score"]
+            .replace("%", "")
+            .strip()
+        )
 
     return result

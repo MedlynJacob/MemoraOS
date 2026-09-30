@@ -7,9 +7,9 @@ def format_context(results: dict) -> str:
     for doc, meta in zip(documents, metadatas):
         formatted.append(
             f"""
-Document Type: {meta['document_type']}
-Company: {meta['company']}
-Filename: {meta['filename']}
+Document Type: {meta.get('document_type', 'Unknown')}
+Company: {meta.get('company', 'Not specified')}
+Filename: {meta.get('filename', 'Unknown')}
 
 {doc}
 """
