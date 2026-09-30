@@ -2,5 +2,5 @@ streamlit
 pandas
 chromadb
 scikit-learn
-ollama
+ollama==0.6.2
 pypdf
