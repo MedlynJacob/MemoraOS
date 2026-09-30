@@ -70,6 +70,7 @@ def show_applications():
     applications = manager.get_all_applications()
     if not applications:
             st.info("No job applications added yet.")
+            return
 
     rows=[]
     for app in applications:
