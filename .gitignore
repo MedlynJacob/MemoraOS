@@ -9,3 +9,7 @@ vector_store/
 .vscode/
 
 .DS_Store
+# Personal / generated MemoraOS data
+data/
+app/storage/application_db/
+app/storage/chroma_db/
